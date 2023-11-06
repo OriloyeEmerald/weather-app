@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 
 const Location = ({weatherData, currentDateTime, saveLocation, modalState, setModalState}) => {
      
-    if (!weatherData) {
+
+      if(!weatherData) {
+
         return <div>Loading...</div>;
-      }
-         
+
+      }      
+
   const cityName = weatherData?.name || '';
   const country = weatherData?.sys?.country || '';
   const weather =weatherData?.weather?.[0]?.main || '';
@@ -24,6 +27,7 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
   const tempInCels = (Math.round((temp - 32) * (5/9) * 100) / 100 );
   const highTempInCels = (Math.round((high - 32) * (5/9) * 100) / 100 );
   const lowTempInCels = (Math.round((low - 32) * (5/9) * 100) / 100);
+
   return (
    <div style={{
     backgroundImage:
@@ -47,11 +51,9 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
 }}
 >
     <div className='mx-[1rem] relative h-[100vh] px-[1rem] rounded-[1rem] blur-background relative' >
-      <Link to={'/'}>
-     <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-        {/* <div className='w-[70px] h-[70px] rounded-full bg-gray-300  mt-[2rem] text-center'>
-            <CaretDoubleLeft className='text-black text-[2.5rem]'/>
-        </div> */}
+    <Link to={'/'}>
+     <div style={{ display: 'flex',justifyContent: 'flex-start' }}>
+       
       <ArrowCircleLeft  className='text-[3.3rem] mt-3'/>
      </div>
     </Link>
@@ -105,7 +107,7 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
       </div>
 
       <Link to={'/savedLocation'}>
-        <button className='bg-white border-[.15rem] border-blue-600 rounded-[.4rem] py-[.9rem] px-[.4rem] mt-[4rem] text-blue-600 w-full'>View Saved Locations</button>
+        <button className='bg-white border-[.15rem] border-blue-600 rounded-[.4rem] py-[.9rem] px-[.4rem] mt-[3rem] text-blue-600 w-full'>View Saved Locations</button>
       </Link>
 
       
