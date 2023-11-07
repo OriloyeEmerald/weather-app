@@ -15,7 +15,7 @@ const SearchLocationBar = ({inputVal, setInputVal, prevSearches, setPrevSearches
   />
 
   <Link to={'/location'}>
-    <button className='bg-blue-600 rounded-[.4rem] py-[.45rem] text-white px-[.6rem] max-w-[70px]' onClick={handleFetch}>Search</button>
+    <button className='bg-blue-600 rounded-[.4rem] py-[.45rem] text-white px-[.6rem] max-w-[80px]' onClick={handleFetch}>Search</button>
   </Link>
 </div>
 
