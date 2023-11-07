@@ -1,32 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
  :root {
-  font-family: 'Poppins', 'Sans-serif';
+  font-family: 'Poppins';
   line-height: 1.5;
   color: #fff;
 
-  /* color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424; */
-
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%; */
+  
 } 
 
 
 
 body {
-  background-image: url('weather2.avif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   min-width: 320px;
   min-height: 100vh;
 }
