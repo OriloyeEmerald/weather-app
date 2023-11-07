@@ -6,7 +6,7 @@ const SearchLocationBar = ({inputVal, setInputVal, prevSearches, setPrevSearches
    
   return (
     <div className='blur-background py-[1.8rem]'>
-       <div className='bg-white border rounded-[.3rem] py-[.4rem] mx-[1rem] flex justify-around items-center mt-[1.5rem]' >
+       <div className='bg-white border rounded-[.3rem] py-[.4rem] mx-[1rem] flex justify-between items-center mt-[1.5rem]' >
   <input 
     type="text"
     value={inputVal}
