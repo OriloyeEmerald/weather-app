@@ -77,11 +77,11 @@ const setBackgroundImage = () => {
     <>
       <div className="w-full h-full absolute top-0 left-0 z-0" style={{ background: '#000', opacity: 0.4 }}></div>
       {Object.keys(displayWeather).length > 0 ? (
-        <div className='p-[1rem] z-30  ' >
+        <div className='p-[1rem] lg:p-[3rem] z-30  ' >
           <h1 className='text-[1.2rem] font-bold z-30 relative text-left'>Weather-wiz</h1>
 
-          <div className='relative lg:absolute lg:left-0 lg:bottom-[5rem] lg:flex lg:items-center lg:ml-[3rem] lg:gap-2'>
-          <p className='text-[2.3rem] lg:text-[5rem]'>{tempInCels}&deg;C</p>
+          <div className='relative lg:absolute lg:left-0 lg:bottom-[5rem] lg:flex lg:items-center lg:ml-[3rem] lg:gap-[1rem] md:[.4rem]'>
+          <p className='text-[2.3rem] lg:text-[5rem]'>{tempInCels}&deg;</p>
           <div className='mt-[1rem]'>
             <p className='text-[1.7rem] lg:text-left lg:text-[1.3rem] '>{cityName}</p>
             <p className='text-[1.1rem] lg:text-[.9rem] '>{currentDateTime}</p>
@@ -96,9 +96,9 @@ const setBackgroundImage = () => {
           
 
         </div>
-      ) : (<div className='p-[1rem] mx-auto text-left'>
+      ) : (<div className='p-[1rem] lg:p-[3rem] mx-auto text-left'>
         <h1 className='text-[1.2rem] font-bold z-30 relative'>Weather-wiz</h1>
-        <h2 className='text-[1.3rem] font-bold z-30 relative'>
+        <h2 className='text-[1.3rem] font-bold z-30 relative lg:w-[900px] mt-[2rem]'>
           Failed to fetch weather of the current location. Check your internet connectivity or enable your location.
         </h2>
       </div>) }

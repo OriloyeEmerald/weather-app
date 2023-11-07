@@ -17,18 +17,23 @@ const SavedLocation = () => {
 
     setBg()
   return (
-    <div style={{}}>
+    <div className=''>
       <Link to={'/'}>
      <div style={{ display: 'flex',justifyContent: 'flex-start' }}>
        
-     <ArrowCircleLeft  className='text-[3.3rem] mt-3 ml-4'/>
+     <ArrowCircleLeft  className='text-[3.3rem] mt-3 ml-5'/>
      </div>
     </Link>
 
+   <div className=''>   
+    <div>
     <h1 className='text-[1.4rem]'><b>Saved Locations</b></h1>
     <br />
     <p>Find your saved locations here</p>
-    <p>You do not have a saved location yet. Your saved locations will show up here when you save them.</p>
+    <p className='mt-[1rem]'>You do not have a saved location yet. Your saved locations will show up here when you save them.</p>
+    </div>
+   </div>
+    
     </div>
   );
 }

@@ -29,7 +29,7 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
   const lowTempInCels = (Math.round((low - 32) * (5/9) * 100) / 100);
 
   return (
-   <div className='lg:w-[100vw] h-[100vh]  flex justify-center items-center' style={{
+   <div className='lg:w-[100vw] h-[100vh]  lg:flex lg:justify-center lg:items-center' style={{
     backgroundImage:
             weather === 'Clouds'
             ? 'url("weather4.avif")'
@@ -50,7 +50,7 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
     backgroundAttachment: 'fixed'
 }}
 >
-    <div className='mx-[1rem] relative  px-[1rem] rounded-[1rem] h-[800px] blur-background relative lg:w-[1200px] lg:h-[600px] shadow-[1.2rem] w-[600px]' >
+    <div className='mx-[1rem] lg:px-[3rem] relative  px-[1rem] rounded-[1rem] h-[100vh] blur-background relative lg:w-[1200px] lg:h-[600px] shadow-[1.2rem]' >
     <Link to={'/'}>
      <div style={{ display: 'flex',justifyContent: 'flex-start' }}>
        
@@ -62,59 +62,62 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
       <div className='text-white'>
         <div className='text-left mt-[.5rem] text-[1.6rem] mt-[1.2rem]'>
             <span>{cityName + ','}</span> <span>{country}</span>
-            <p className='text-[.9rem] mt-[.8rem]'>{currentDateTime}</p>
+            <p className='text-[.9rem] mt-[.8rem] font-thin'>{currentDateTime}</p>
         </div>
          
       </div>
-      <div className='lg:flex lg:gap-4'>
-      <div className='mt-[.5rem] flex justify-center gap-[.5rem] items-center'>
-          <img src={iconUrl} alt="" className='w-[160px]' />
+      <div className='lg:flex lg:gap-[2rem] '>
+       <div className='mt-[.5rem] flex    justify-center gap-[.8rem]  items-center'>
+          <img src={iconUrl} alt="" className='w-[160px] lg:w-[200px] ' />
  
            <div>
-            <p className='text-[1.6rem]'>{tempInCels}&deg;C</p>
-           <p>{weather}</p>
+            <p className='text-[1.6rem] lg:text-[3.5rem]'>{tempInCels}&deg;</p>
+           <p className='font-thin'>{weather}</p>
            </div>
           
          </div>
-
-      <div className='flex justify-between mt-[.5rem] items-center '>
+         <div className='lg:border-r-[.1rem]'></div>
+         <div>
+         <div className='flex justify-between mt-[.5rem] items-center lg:gap-[2rem]'>
         <div>
          <p className='text-[1.1rem]'>{highTempInCels}</p>
-         <p>High</p>
+         <p className='font-thin'>High</p>
         </div>
         <div>
          <p className='text-[1.1rem]'>{wind}mph</p>
-         <p>Wind</p>
+         <p className='font-thin'>Wind</p>
         </div>
         <div>
          <p className='text-[1.1rem]'>{humidity}%</p>
-         <p>Humidity</p>
+         <p className='font-thin'>Humidity</p>
         </div>
       </div>
 
-      <div className='flex justify-between mt-[2rem] items-center'>
+      <div className='flex justify-between mt-[2rem] items-center lg:gap-[2rem]'>
         <div>
          <p className='text-[1.1rem]'>{lowTempInCels}</p>
-         <p>Low</p>
+         <p className='font-thin'>Low</p>
         </div>
         <div>
          <p className='text-[1.1rem]'>{pressure}in</p>
-         <p>Pressure</p>
+         <p className='font-thin'>Pressure</p>
         </div>
         <div>
          <p className='text-[1.1rem]'>{precipitation}%</p>
-         <p>Precipitation</p>
+         <p className='font-thin'>Precipitation</p>
         </div>
       </div>
+         </div>
+      
       </div>
       <Link to={'/savedLocation'}>
-        <button className='bg-white border-[.15rem] border-blue-600 rounded-[.4rem] py-[.9rem] px-[.4rem] mt-[1.5rem] text-blue-600 w-full lg:w-1/5 lg:text-[.8rem]'>View Saved Locations</button>
+        <button className='bg-white border-[.15rem] border-blue-600 rounded-[.4rem] py-[.8rem] px-[.4rem] mt-[2rem] text-blue-600 w-full lg:w-1/5 lg:text-[.8rem] font-thin'>View Saved Locations</button>
       </Link>
 
       
     </div>
     {modalState &&  
-  <div className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50' style={{ width: '365px' }}>
+  <div className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 shadow-lg' style={{ width: '365px' }}>
     <div className='bg-white rounded-[.8rem] py-[1.5rem] text-black'>
 
     <div className="flex justify-end mr-[1rem]">
