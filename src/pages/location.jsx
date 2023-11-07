@@ -60,16 +60,16 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
         <button className='bg-blue-600 rounded-[.3rem] text-white py-[.7rem] px-[1rem] mt-2' onClick={saveLocation}>Save Location</button>
 
       <div className='text-white'>
-        <div className='text-left mt-[.5rem] text-[1.8rem] mt-[1.2rem]'>
+        <div className='text-left mt-[.5rem] text-[1.6rem] mt-[1.2rem]'>
             <span>{cityName + ','}</span> <span>{country}</span>
-            <p className='text-[1rem] mt-[.8rem]'>{currentDateTime}</p>
+            <p className='text-[.9rem] mt-[.8rem]'>{currentDateTime}</p>
         </div>
          
          <div className='mt-[.5rem] flex justify-center gap-[.5rem] items-center'>
-          <img src={iconUrl} alt="" className='w-[180px]' />
+          <img src={iconUrl} alt="" className='w-[160px]' />
  
            <div>
-            <p className='text-[1.8rem]'>{tempInCels}&deg;C</p>
+            <p className='text-[1.6rem]'>{tempInCels}&deg;C</p>
            <p>{weather}</p>
            </div>
           
@@ -78,30 +78,30 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
 
       <div className='flex justify-between mt-[.5rem] items-center'>
         <div>
-         <p className='text-[1.3rem]'>{highTempInCels}</p>
+         <p className='text-[1.1rem]'>{highTempInCels}</p>
          <p>High</p>
         </div>
         <div>
-         <p className='text-[1.3rem]'>{wind}mph</p>
+         <p className='text-[1.1rem]'>{wind}mph</p>
          <p>Wind</p>
         </div>
         <div>
-         <p className='text-[1.3rem]'>{humidity}%</p>
+         <p className='text-[1.1rem]'>{humidity}%</p>
          <p>Humidity</p>
         </div>
       </div>
 
       <div className='flex justify-between mt-[2rem] items-center'>
         <div>
-         <p className='text-[1.3rem]'>{lowTempInCels}</p>
+         <p className='text-[1.1rem]'>{lowTempInCels}</p>
          <p>Low</p>
         </div>
         <div>
-         <p className='text-[1.3rem]'>{pressure}in</p>
+         <p className='text-[1.1rem]'>{pressure}in</p>
          <p>Pressure</p>
         </div>
         <div>
-         <p className='text-[1.3rem]'>{precipitation}%</p>
+         <p className='text-[1.1rem]'>{precipitation}%</p>
          <p>Precipitation</p>
         </div>
       </div>
@@ -113,7 +113,7 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
       
     </div>
     {modalState &&  
-  <div className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] '>
+  <div className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50' style={{ width: '375px' }}>
     <div className='bg-white rounded-[.8rem] py-[1.5rem] text-black'>
 
     <div className="flex justify-end mr-[1rem]">
