@@ -10,7 +10,7 @@ const SearchLocationBar = ({inputVal, setInputVal, prevSearches, setPrevSearches
   <input 
     type="text"
     value={inputVal}
-    placeholder='Search for a city' className='text-black bg-transparent flex-2 focus:outline-0 px-2' onChange={(e) => setInputVal(e.target.value)}
+    placeholder='Search for a city' className='text-black bg-transparent focus:outline-0 px-1' onChange={(e) => setInputVal(e.target.value)}
     onKeyDown={handleKeyDown}
   />
 
