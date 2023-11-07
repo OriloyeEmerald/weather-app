@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const SearchLocationBar = ({inputVal, setInputVal, prevSearches, setPrevSearches, handleFetch, delSearchedRes, displayWeather, wind, humidity, tempInCels, handleKeyDown}) => {
    
   return (
-    <div className='blur-background py-[1.8rem]'>
-       <div className='bg-white border rounded-[.3rem] py-[.4rem] mx-[1rem] flex justify-between items-center mt-[1.5rem]' >
+    <div className='blur-background py-[1.8rem] lg:absolute lg:right-0 lg:top-0 lg:h-[100vh] lg:w-[700px] shadow-[1rem]'>
+  <div className='bg-white border rounded-[.3rem] py-[.4rem] mx-[1rem] flex justify-between items-center mt-[1.5rem]'  >
   <input 
     type="text"
     value={inputVal}
@@ -41,7 +41,7 @@ const SearchLocationBar = ({inputVal, setInputVal, prevSearches, setPrevSearches
        <p className='border-b-[.09rem] mx-[1rem] mt-[.5rem]'></p>
 
        {Object.keys(displayWeather).length >  0 && <div className='text-left px-[1rem]'>
-         <p className='text-center text-[1.17rem] text-curr'>Current Location Weather Detail</p>
+         <p className='text-center text-[1.17rem] text-curr lg:text-left lg:mt-3'>Current Location Weather Detail</p>
          <div className='flex justify-between text-[1.1rem] mt-[.5rem]'>
             <p>Humidity</p>
             <p>{humidity}%</p>

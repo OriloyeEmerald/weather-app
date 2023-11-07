@@ -29,7 +29,7 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
   const lowTempInCels = (Math.round((low - 32) * (5/9) * 100) / 100);
 
   return (
-   <div style={{
+   <div className='lg:w-[100vw] h-[100vh]  flex justify-center items-center' style={{
     backgroundImage:
             weather === 'Clouds'
             ? 'url("weather4.avif")'
@@ -50,7 +50,7 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
     backgroundAttachment: 'fixed'
 }}
 >
-    <div className='mx-[1rem] relative h-[100vh] px-[1rem] rounded-[1rem] blur-background relative' >
+    <div className='mx-[1rem] relative  px-[1rem] rounded-[1rem] h-[800px] blur-background relative lg:w-[1200px] lg:h-[600px] shadow-[1.2rem] w-[600px]' >
     <Link to={'/'}>
      <div style={{ display: 'flex',justifyContent: 'flex-start' }}>
        
@@ -65,7 +65,9 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
             <p className='text-[.9rem] mt-[.8rem]'>{currentDateTime}</p>
         </div>
          
-         <div className='mt-[.5rem] flex justify-center gap-[.5rem] items-center'>
+      </div>
+      <div className='lg:flex lg:gap-4'>
+      <div className='mt-[.5rem] flex justify-center gap-[.5rem] items-center'>
           <img src={iconUrl} alt="" className='w-[160px]' />
  
            <div>
@@ -74,9 +76,8 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
            </div>
           
          </div>
-      </div>
 
-      <div className='flex justify-between mt-[.5rem] items-center'>
+      <div className='flex justify-between mt-[.5rem] items-center '>
         <div>
          <p className='text-[1.1rem]'>{highTempInCels}</p>
          <p>High</p>
@@ -105,9 +106,9 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
          <p>Precipitation</p>
         </div>
       </div>
-
+      </div>
       <Link to={'/savedLocation'}>
-        <button className='bg-white border-[.15rem] border-blue-600 rounded-[.4rem] py-[.9rem] px-[.4rem] mt-[1.5rem] text-blue-600 w-full'>View Saved Locations</button>
+        <button className='bg-white border-[.15rem] border-blue-600 rounded-[.4rem] py-[.9rem] px-[.4rem] mt-[1.5rem] text-blue-600 w-full lg:w-1/5 lg:text-[.8rem]'>View Saved Locations</button>
       </Link>
 
       

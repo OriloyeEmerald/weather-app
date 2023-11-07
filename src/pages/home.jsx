@@ -77,19 +77,21 @@ const setBackgroundImage = () => {
     <>
       <div className="w-full h-full absolute top-0 left-0 z-0" style={{ background: '#000', opacity: 0.4 }}></div>
       {Object.keys(displayWeather).length > 0 ? (
-        <div className='p-[1rem] z-30 relative' >
+        <div className='p-[1rem] z-30  ' >
           <h1 className='text-[1.2rem] font-bold z-30 relative text-left'>Weather-wiz</h1>
 
-          <p className='text-[2.3rem]'>{tempInCels}&deg;C</p>
+          <div className='relative lg:absolute lg:left-0 lg:bottom-[5rem] lg:flex lg:items-center lg:ml-[3rem] lg:gap-2'>
+          <p className='text-[2.3rem] lg:text-[5rem]'>{tempInCels}&deg;C</p>
           <div className='mt-[1rem]'>
-            <p className='text-[1.7rem]'>{cityName}</p>
-            <p className='text-[1.1rem]'>{currentDateTime}</p>
+            <p className='text-[1.7rem] lg:text-left lg:text-[1.3rem] '>{cityName}</p>
+            <p className='text-[1.1rem] lg:text-[.9rem] '>{currentDateTime}</p>
           </div>
 
           <div className=''>
           <img src={iconUrl} alt="" className='mx-auto'/>
            <p className='text-[1.6rem]'>{weather}</p>
            
+          </div>
           </div>
           
 
