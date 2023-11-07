@@ -10,12 +10,12 @@ const SearchLocationBar = ({inputVal, setInputVal, prevSearches, setPrevSearches
   <input 
     type="text"
     value={inputVal}
-    placeholder='Search for a city' className='text-black bg-transparent max-w-[50%]' onChange={(e) => setInputVal(e.target.value)}
+    placeholder='Search for a city' className='text-black bg-transparent pl-1 max-w-[20px] overflow-x-hidden' onChange={(e) => setInputVal(e.target.value)}
     onKeyDown={handleKeyDown}
   />
 
   <Link to={'/location'}>
-    <button className='bg-blue-600 rounded-[.4rem] py-[.45rem] text-white px-[.6rem] max-w-[35%]' onClick={handleFetch}>Search</button>
+    <button className='bg-blue-600 rounded-[.4rem] py-[.45rem] text-white px-[.6rem] w-1/2' onClick={handleFetch}>Search</button>
   </Link>
 </div>
 
