@@ -38,7 +38,6 @@ function App() {
        const res = await axios.get(`${API_URL}q=${inputVal}&units=imperial&appid=1b3b237b684eb68a390fc4acbc493a04`)
       const weatherData = await res.data;
       setWeatherData(weatherData)
-      console.log(weatherData);
       setInputVal('');
       addSearchedRes();
     } catch (error) {

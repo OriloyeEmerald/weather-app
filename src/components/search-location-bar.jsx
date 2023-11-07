@@ -6,7 +6,7 @@ const SearchLocationBar = ({inputVal, setInputVal, prevSearches, setPrevSearches
    
   return (
     <div className='blur-background py-[1.8rem]'>
-       <div className='bg-white border rounded-[.3rem] py-[.4rem] mx-[1rem] flex justify-around gap-[.1rem] items-center mt-[1.5rem]' style={{ flexWrap: 'nowrap', overflow: 'hidden' }}>
+       <div className='bg-white border rounded-[.3rem] py-[.4rem] mx-[1rem] flex justify-center gap-[.1rem] items-center mt-[1.5rem]' >
   <input 
     type="text"
     value={inputVal}
@@ -23,7 +23,7 @@ const SearchLocationBar = ({inputVal, setInputVal, prevSearches, setPrevSearches
           <p>Your previous searches</p>
           {prevSearches.map((searchRes, id) => {
                 return <div className='flex justify-between mt-[.4rem]' key={id}>
-                     <Link to={`/location/${searchRes.id}`}>
+                     <Link to={`/location`}>
                       <p className='text-[1.2rem]'>{searchRes.city}</p>
                       </Link>
                       <button className='border rounded-[.3rem] text-white bg-gray-400 py-[.4rem] px-[.5rem] text-center text-[1.5rem]' onClick={() => delSearchedRes(searchRes.id)}>

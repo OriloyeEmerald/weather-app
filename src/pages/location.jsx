@@ -107,7 +107,7 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
       </div>
 
       <Link to={'/savedLocation'}>
-        <button className='bg-white border-[.15rem] border-blue-600 rounded-[.4rem] py-[.9rem] px-[.4rem] mt-[3rem] text-blue-600 w-full'>View Saved Locations</button>
+        <button className='bg-white border-[.15rem] border-blue-600 rounded-[.4rem] py-[.9rem] px-[.4rem] mt-[1rem] text-blue-600 w-full'>View Saved Locations</button>
       </Link>
 
       
@@ -130,6 +130,9 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
     </div>
   </div>
 }
+ {modalState && (
+        <div className='fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40'></div>
+      )}
 
     </div>
   );
