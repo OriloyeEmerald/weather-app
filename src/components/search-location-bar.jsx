@@ -1,4 +1,4 @@
-import { X } from 'phosphor-react';
+import { MagnifyingGlass, X } from 'phosphor-react';
 import { Link } from 'react-router-dom';
 
 
@@ -6,16 +6,18 @@ const SearchLocationBar = ({inputVal, setInputVal, prevSearches, setPrevSearches
    
   return (
     <div className='blur-background py-[1.8rem]'>
-       <div className='bg-white border rounded-[.3rem] py-[.4rem] mx-[1rem] flex items-center mt-[1.5rem]' >
+       <div className='bg-white border rounded-[.3rem] py-[.4rem] mx-[1rem] flex  gap-[.3rem] items-center mt-[1.5rem]' >
   <input 
     type="text"
     value={inputVal}
-    placeholder='Search for a city' className='text-black bg-transparent focus:outline-0 pl-1 max-w-[50%]' onChange={(e) => setInputVal(e.target.value)}
+    placeholder='Search for a city' className='text-black bg-transparent focus:outline-0' onChange={(e) => setInputVal(e.target.value)}
     onKeyDown={handleKeyDown}
   />
 
   <Link to={'/location'}>
-    <button className='bg-blue-600 rounded-[.4rem] py-[.45rem] text-white px-[.5rem] max-w-[45%]' onClick={handleFetch}>Search</button>
+    <button className='bg-blue-600 rounded-[.4rem] py-[.4rem] text-white px-[.3rem]' onClick={handleFetch}>
+      <MagnifyingGlass />
+    </button>
   </Link>
 </div>
 
