@@ -117,7 +117,7 @@ const Location = ({weatherData, currentDateTime, saveLocation, modalState, setMo
       
     </div>
     {modalState &&  
-  <div className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 shadow-lg' style={{ width: '365px' }}>
+  <div className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 lg:shadow-lg' style={{ width: '365px' }}>
     <div className='bg-white rounded-[.8rem] py-[1.5rem] text-black'>
 
     <div className="flex justify-end mr-[1rem]">
